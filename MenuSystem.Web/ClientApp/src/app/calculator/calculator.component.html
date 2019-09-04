@@ -1,0 +1,11 @@
+<div class="form-group">
+    <div class="row">
+        <input type="number" class="form-control text-right col-sm-4" [value]="input" readonly>
+    </div>
+    <div class="col-sm-12" style="height:30px;"></div>
+    <div class="row">
+        <calculator-btn class="col-sm-2" (inputAdded)="addDigit($event)"></calculator-btn>
+        <calculator-operations class="col-sm-2" (operationEvent)="addOperation($event)"
+        (getTotalEvent)="getTotal()" (resetAllEvent)="resetAll()"></calculator-operations>
+    </div>    
+</div>

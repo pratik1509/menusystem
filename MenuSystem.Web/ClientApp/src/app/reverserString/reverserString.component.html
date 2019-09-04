@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="row col-sm-4">
+        Enter string to reverse -
+        <input type="text" class="form-control" [(ngModel)]="strToReverse" />
+    </div>
+    <div class="col-sm-12" style="height:30px;"></div>
+    <div class="row col-sm-4">
+        <input type="button" class="btn btn-primary" value="Reverse string" (click)="reverseStringEfficient()" />
+    </div>
+    <div class="col-sm-12" style="height:30px;"></div>
+    <div class="row col-sm-4" *ngIf="reversedStr">
+        <span>Reversed string - <strong> {{reversedStr}} </strong></span>
+    </div>
+</div>

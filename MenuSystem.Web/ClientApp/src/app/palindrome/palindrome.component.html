@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="row col-sm-4">
+        Enter string to check -
+        <input type="text" class="form-control" [(ngModel)]="inputStr" />
+    </div>
+    <div class="col-sm-12" style="height:30px;"></div>
+    <div class="row col-sm-4">
+        <input type="button" class="btn btn-primary" value="Check palindrome" (click)="checkIsPalindrome()" />
+    </div>
+    <div class="col-sm-12" style="height:30px;"></div>
+    <div class="row col-sm-4">
+        <span>Is palindrome - <strong> {{isPalindrome ? 'Yes' : 'No'}} </strong></span>
+    </div>
+</div>

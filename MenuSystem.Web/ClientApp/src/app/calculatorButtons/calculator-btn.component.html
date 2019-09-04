@@ -1,0 +1,18 @@
+<div>
+
+    <div class="row">
+        <input class="btn btn-primary btn-space" *ngFor="let number of [7,8,9]" type="button" [value]="number"
+            (click)="btnClick(number)" />
+    </div>
+    <div class="row">
+        <input class="btn btn-primary btn-space" *ngFor="let number of [4,5,6]" type="button" [value]="number"
+            (click)="btnClick(number)" />
+    </div>
+    <div class="row">
+        <input class="btn btn-primary btn-space" *ngFor="let number of [1,2,3]" type="button" [value]="number"
+            (click)="btnClick(number)" />
+    </div>
+    <div class="row">
+        <input class="btn btn-primary btn-space" type="button" [value]="0" (click)="btnClick(0)" />
+    </div>
+</div>

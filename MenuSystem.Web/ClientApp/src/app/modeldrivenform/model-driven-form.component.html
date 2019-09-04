@@ -1,0 +1,42 @@
+
+<form [formGroup]="registrationForm" novalidate class="container">
+    <fieldset formGroupName="name">
+        <div class="form-group">
+            <label>First name</label>
+            <input type="text" class="form-control" 
+            formControlName="firstName"/>
+        </div>
+        <div class="form-group">
+            <label>Last name</label>
+            <input type="text" class="form-control"
+             formControlName="lastName"/>
+        </div>        
+    </fieldset>
+    <div class="form-group" [ngClass]="{
+        'has-success': registrationForm.controls.email.valid,
+        'has-danger': registrationForm.controls.email.invalid
+    }">
+        <label>Email</label>
+        <input type="text" class="form-control" 
+        formControlName="email"/>
+    </div>
+    <div class="feedback">
+        <label *ngIf="registrationForm.controls.email.invalid && (registrationForm.controls.email.touched || registrationForm.controls.email.dirty)">Email is invalid</label>
+    </div>    
+    <div class="form-group">
+        <label>Password</label>
+        <input type="text" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Language</label>
+        <select class="form-control">
+            <option>English</option>
+            <option>Hindi</option>
+            <option>French</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <input type="button" class="btn btn-primary" value="Submit" />
+    </div>
+</form>
+<pre>{{registrationForm.value | json}}</pre>
